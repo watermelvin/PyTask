@@ -1,5 +1,5 @@
 tasks = {}
-running = True;
+running = True
 while running == True:
     command = input("Enter a task to get started, \"pending\" to view a list of all pending tasks, \"completed\" for completed items.\n")
     if command == "pending":
