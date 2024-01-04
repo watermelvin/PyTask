@@ -25,7 +25,7 @@ if os.path.isfile("Tasks.csv"):
             print("That task isn't already in the list. Saving as a new pending task...")
             # new_pending_task = pd.DataFrame(command, "pending")
             tasks_list = open("Tasks.csv", "a")
-            tasks_list.write(command + ",pending")
+            tasks_list.write(command + ",pending\n")
 
 # Error in case Tasks.csv isn't there.
 else:
