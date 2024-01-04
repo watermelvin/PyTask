@@ -2,16 +2,28 @@ import pandas as pd
 import os.path
 running = True
 if os.path.isfile("Tasks.csv"):
-    logfile = pd.read_csv("Tasks.csv")
+    # load tasks.csv as a dataframe into pandas
+    tasks = pd.read_csv("Tasks.csv")
     # prompt user for a command
     command = input("Enter a task to get started, \"pending\" to view pending tasks, \"completed\" for completed items, or \"all\" for all items and their status. \n")
-    if logfile.loc[logfile["Task_name"] == command].empty:
-        print("That task isn't already in the list. Saving as a new pending task...")
-    elif command == "pending":
+    if command == "pending":
+        # print out only pending tasks
+        pending_tasks = tasks[tasks["Status"] == "pending"]
         print("Pending Tasks:")
-        #however the heck you print stuff based on a field in pandas.
-        
+        print(pending_tasks.to_string())
+    elif command == "completed":
+        completed_tasks = tasks[tasks["Status"] == "completed"]
+        print("Completed Tasks:")
+        print(completed_tasks.to_string())
+    elif command == "all":
+        print("All Tasks:")
+        print(tasks.to_string())
+    elif command == "EXIT":
+        exit
+    elif tasks.loc[tasks["Task Name"] == command].empty:
+        print("That task isn't already in the list. Saving as a new pending task...")
 
+# Error in case Tasks.csv isn't there.
 else:
     print("Tasks.csv not found!")
 # tasks = {}
