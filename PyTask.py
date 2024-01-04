@@ -1,13 +1,17 @@
 import pandas as pd
-import numpy as np
 import os.path
-command = input("Enter a task to get started, \"pending\" to view pending tasks, \"completed\" for completed items, or \"all\" for all items and their status. \n")
 running = True
 if os.path.isfile("Tasks.csv"):
     logfile = pd.read_csv("Tasks.csv")
-    input("Enter a command to get started. (Try \"pending\", \"completed\", or \"all\")")
+    # prompt user for a command
+    command = input("Enter a task to get started, \"pending\" to view pending tasks, \"completed\" for completed items, or \"all\" for all items and their status. \n")
     if logfile.loc[logfile["Task_name"] == command].empty:
-        print("The tasks list is empty. Try adding one.")
+        print("That task isn't already in the list. Saving as a new pending task...")
+    elif command == "pending":
+        print("Pending Tasks:")
+        #however the heck you print stuff based on a field in pandas.
+        
+
 else:
     print("Tasks.csv not found!")
 # tasks = {}
