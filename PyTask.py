@@ -6,7 +6,7 @@ if os.path.isfile("Tasks.csv"):
         # load tasks.csv as a dataframe into pandas
         tasks = pd.read_csv("Tasks.csv")
         # prompt user for a command
-        command = input("Enter a task to get started, \"pending\" to view pending tasks, \"completed\" for completed items, or \"all\" for all items and their status. \n")
+        command = input("Enter a new task to get started, \"pending\" to view current pending tasks, \"completed\" for completed items, or \"all\" for all items and their status. \n")
         if command == "pending":
             # print out only pending tasks
             pending_tasks = tasks[tasks["Status"] == "pending"]
