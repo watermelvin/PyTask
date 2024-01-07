@@ -48,6 +48,7 @@ if os.path.isfile("Tasks.csv"):
             # new_pending_task = pd.DataFrame(command, "pending")
             tasks_list = open("Tasks.csv", "a")
             tasks_list.write(command + ",pending\n")
+            tasks_list.close()
             tasks = pd.read_csv("Tasks.csv")
         # TODO: add a way to mark pending tasks as completed and completed as pending.
 # Error in case Tasks.csv isn't there.
