@@ -14,34 +14,50 @@ if os.path.isfile("Tasks.csv"):
             print(pending_tasks.to_string())
             # ask for which task to modify, if any
             modification = input("Enter a number of a task to change it to completed, or \"exit\" to leave this menu.")
+            # if no modification, exit menu.
             if modification == "exit":
                 continue
             else:
                 # change given task to completed
-                tasks.loc[modification, "Status"] = "completed"
+                tasks.at[modification, "Status"] = "completed"
                 tasks.to_csv("Tasks.csv", index=False)
                 # after modifying, print new pending tasks list.
                 print("All Tasks:")
                 print(tasks.to_string())
-
         elif command == "completed":
             completed_tasks = tasks[tasks["Status"] == "completed"]
             print("Completed Tasks:")
             print(completed_tasks.to_string())
             # ask for which task to modify, if any
             modification = input("Enter a number of a task to change it to pending, or \"exit\" to leave this menu.")
+            # if no modification, exit menu.
             if modification == "exit":
                 continue
             else:
-                tasks.loc[modification, "Status"] = "pending"
+                # change given task to completed
+                tasks.at[int(modification), "Status"] = "pending"
                 tasks.to_csv("Tasks.csv", index=False)
+                # after modifying, print new pending tasks list.
                 print("All Tasks:")
                 print(tasks.to_string())
         elif command == "all":
             print("All Tasks:")
             print(tasks.to_string())
-            # modification = input("Enter the number of the task to modify, or \"exit\" to exit this menu.")
-        elif command == "EXIT":
+            modification = input("Enter the number of the task to modify, or \"exit\" to exit this menu.")
+            # exit the menu if user inputs exit
+            if modification == "exit":
+                continue
+            else:
+                new_status = input("Enter the new status:")
+                # change given task to completed
+                tasks.at[int(modification), "Status"] = new_status
+                tasks.to_csv("Tasks.csv", index=False)
+                # message about modification
+                print(f"Modified task {modification}'s status to {new_status}.")
+                # after modifying, print new pending tasks list.
+                print("All Tasks:")
+                print(tasks.to_string())
+        elif command == "exit":
             running = False
         elif tasks.loc[tasks["Task Name"] == command].empty:
             print("That task isn't already in the list. Saving as a new pending task...")
