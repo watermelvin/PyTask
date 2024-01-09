@@ -68,15 +68,17 @@ if os.path.isfile("Tasks.csv"):
             tasks = pd.read_csv("Tasks.csv")
         else:
             new_status = input("What modification do you want to do? (completed, pending, delete)?")
-            # make this command an int, not a string.
-            tasks.at[command, "Status"] = new_status
+            # identifies the tasks with the matching name
+            dupe_task = tasks["Task Name"] == command
+            tasks.loc[dupe_task, "Status"] = new_status
+            # tasks.at[dupe_task, new_status]
             tasks.to_csv("Tasks.csv", index=False)
             # message about modification
             print(f"Modified task {command}'s status to {new_status}.")
             # after modifying, print new pending tasks list.
             print("All Tasks:")
             print(tasks.to_string())
-
+            
         # TODO: make a way to delete tasks
 # Error in case Tasks.csv isn't there.
 else:
