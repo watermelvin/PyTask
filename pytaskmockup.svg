@@ -90,27 +90,6 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <text
-       xml:space="preserve"
-       style="font-size:14.1111px;white-space:pre;inline-size:77.7199;fill:#000000;stroke-width:0.264583"
-       x="20.198994"
-       y="28.802267"
-       id="text1"
-       transform="matrix(2.2019319,0,0,2.3799593,-22.757934,-16.543427)"><tspan
-         x="20.198994"
-         y="28.802267"
-         id="tspan7">TASKS</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:14.1111px;fill:#000000;stroke-width:0.264583"
-       x="25.127228"
-       y="54.221909"
-       id="text2"><tspan
-         sodipodi:role="line"
-         id="tspan2"
-         style="stroke-width:0.264583"
-         x="25.127228"
-         y="54.221909" /></text>
     <path
        style="fill:#000000;fill-opacity:0.49635;stroke-width:0.265;stroke-dasharray:none"
        id="rect2"
@@ -123,28 +102,6 @@
        d="m 20.389472,15.169849 h 46.222265 a 4.2734886,4.2734886 45 0 1 4.273488,4.273489 v 9.347609 a 4.8001859,4.8001859 135 0 1 -4.800186,4.800186 H 19.582233 A 3.2448362,3.2448362 45 0 1 16.337397,30.346297 V 19.221924 a 4.0520751,4.0520751 135 0 1 4.052075,-4.052075 z"
        ry="0"
        transform="matrix(2.2019319,0,0,2.3799593,-22.757934,-16.543427)" />
-    <text
-       xml:space="preserve"
-       style="font-size:32.3034px;fill:#000000;fill-opacity:0.49635;stroke-width:0.60664;stroke-dasharray:none"
-       x="24.720531"
-       y="98.402527"
-       id="text3"
-       transform="scale(0.96187179,1.0396396)"><tspan
-         sodipodi:role="line"
-         id="tspan3"
-         style="fill:#000000;fill-opacity:1;stroke-width:0.606642"
-         x="24.720531"
-         y="98.402527">[X] TASK 1</tspan><tspan
-         sodipodi:role="line"
-         style="fill:#000000;fill-opacity:1;stroke-width:0.606642"
-         x="24.720531"
-         y="138.78171"
-         id="tspan4">[ ] TASK 2</tspan><tspan
-         sodipodi:role="line"
-         style="fill:#000000;fill-opacity:1;stroke-width:0.606642"
-         x="24.720531"
-         y="179.1609"
-         id="tspan5">[ ] TASK 3</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:14.1111px;fill:#000000;fill-opacity:1;stroke-width:0.264999;stroke-dasharray:none"
@@ -178,5 +135,37 @@
        sodipodi:type="rect"
        d="m 20.816184,11.221663 h 73.483191 a 7.8177583,7.8177583 45 0 1 7.817755,7.817759 v 91.811898 a 8.4723554,8.4723554 135 0 1 -8.472352,8.47236 l -71.799943,0 a 8.1918136,8.1918136 45 0 1 -8.191813,-8.19182 V 18.384825 a 7.1631618,7.1631618 135 0 1 7.163162,-7.163162 z"
        transform="matrix(2.2019319,0,0,2.3799593,-22.757934,-16.543427)" />
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;white-space:pre;inline-size:77.7199;display:inline;fill:#ffffff;stroke-width:0.264583"
+       x="20.198994"
+       y="28.802267"
+       id="text1"
+       transform="matrix(2.2019319,0,0,2.3799593,-22.757934,-16.543427)"><tspan
+         x="20.198994"
+         y="28.802267"
+         id="tspan2">TASKS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:32.3034px;fill:#ffffff;fill-opacity:0.49635;stroke-width:0.60664;stroke-dasharray:none"
+       x="24.720531"
+       y="98.402527"
+       id="text3"
+       transform="scale(0.96187178,1.0396396)"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.606642"
+         x="24.720531"
+         y="98.402527">[X] TASK 1</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.606642"
+         x="24.720531"
+         y="138.78171"
+         id="tspan4">[ ] TASK 2</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.606642"
+         x="24.720531"
+         y="179.1609"
+         id="tspan5">[ ] TASK 3</tspan></text>
   </g>
 </svg>
